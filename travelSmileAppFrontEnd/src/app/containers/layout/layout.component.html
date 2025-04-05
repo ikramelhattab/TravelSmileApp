@@ -1,0 +1,69 @@
+<mat-sidenav-container autosize>
+
+    <mat-sidenav #sideNav>
+
+        <div class="sidenav-content">
+            <img class="logo-img" src="assets/logo.png">
+
+            <div class="user-info text-center">
+                <img class="avatar" src="assets/avatar.png">
+                <div class="name">IKram </div>
+                <div class="email" [title]="userEmail">test</div>
+            </div>
+
+            <hr class="seperator" style="margin-bottom: 30px;">
+
+            <mat-nav-list>
+                <!-- Reservations - missions -->
+                <a mat-list-item class="mat-list-item" [routerLink]="['/trips']" routerLinkActive
+                    #reservation="routerLinkActive">
+                                     Trips                </a>
+                <a mat-list-item class="mat-list-item" [routerLink]="'/travelers'" routerLinkActive
+                    #reservationDetails="routerLinkActive" style="display: none;"></a>
+
+                <!-- Fuites -->
+                <a mat-list-item class="mat-list-item" [routerLink]="'/travelers'" routerLinkActive="link-active">
+                    Fuites
+                </a>
+
+               
+
+                <!-- Gains -->
+                <a mat-list-item class="mat-list-item" [routerLink]="'/gain'" routerLinkActive="link-active">
+                    Gains
+                </a>
+
+            </mat-nav-list>
+
+            <div class="side-nav-footer">
+                <hr class="seperator">
+                <a mat-list-item class="mat-list-item" routerLinkActive="link-active">
+                    <div class="title-nav">
+                        <i class="fa-solid fa-power-off"></i> &nbsp;&nbsp; Déconnecter
+                    </div>
+                </a>
+            </div>
+        </div>
+    </mat-sidenav>
+
+
+
+    <mat-sidenav-content>
+        <mat-toolbar>
+            <mat-toolbar-row>
+                <button class="toggle-menu" (click)="showMenu = !showMenu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="app-title">{{pageTitle}}</div>
+            </mat-toolbar-row>
+        </mat-toolbar>
+        <div class="app-body">
+            <main class="main">
+                <div class="container-fluid">
+                    <router-outlet></router-outlet>
+                </div>
+            </main>
+        </div>
+    </mat-sidenav-content>
+
+</mat-sidenav-container>

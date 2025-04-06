@@ -42,7 +42,6 @@ TravelSmileApp is a full-stack web application that allows users to manage trips
 
 ```
 CREATE DATABASE travelsmile;
-
 ```
 #### ✅ Step 2: Configure the connection
 Edit src/main/resources/application.properties:
@@ -51,7 +50,6 @@ Edit src/main/resources/application.properties:
 spring.datasource.url=jdbc:mysql://localhost:3306/travelsmile
 spring.datasource.username=root
 spring.datasource.password=yourpassword
-
 ```
 #### ✅ Step 3: Run the backend
 
@@ -74,7 +72,6 @@ You can register a new account, or use this sample:
   "email": "test@example.com",
   "password": "123456"
 }
-
 ```
 ## 📜 Swagger UI
 

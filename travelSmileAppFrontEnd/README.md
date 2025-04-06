@@ -1,27 +1,90 @@
-# TravelSmileApp
+# 🌍 TravelSmileApp – Full Stack Angular & Spring Boot
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.3.
+## 📖 Overview
 
-## Development server
+TravelSmileApp is a full-stack web application that allows users to manage trips and travelers. Key features include:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- JWT-based authentication
+- Register with auto-login
+- CRUD operations for trips and travelers
+- Confirmation popups for deletions
+- Swagger UI for API exploration
 
-## Code scaffolding
+---
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 🛠️ Tech Stack
 
-## Build
+| Frontend      | Backend        |
+|---------------|----------------|
+| Angular 17+   | Spring Boot 3+ |
+| RxJS          | Spring Security |
+| Bootstrap     | Spring Data JPA |
+| Vite / SCSS   | MySQL          |
+| JWT           | Hibernate      |
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+---
 
-## Running unit tests
+## 🚀 How to Run the Application Locally
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### 🧱 Requirements
 
-## Running end-to-end tests
+- Node.js (v16 or higher)
+- Angular CLI
+- Java 17+
+- Maven
+- MySQL
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+---
 
-## Further help
+### 1. 🖥️ Backend (Spring Boot)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+#### ✅ Step 1: Create the database
+
+CREATE DATABASE travelsmile;
+
+#### ✅ Step 2: Configure the connection
+Edit src/main/resources/application.properties:
+
+
+spring.datasource.url=jdbc:mysql://localhost:3306/travelsmile
+spring.datasource.username=root
+spring.datasource.password=yourpassword
+#### ✅ Step 3: Run the backend
+
+cd travelSmileAppBackend
+./mvnw spring-boot:run
+The backend will run on http://localhost:8080
+
+### 2. 💻 Frontend (Angular)
+
+cd travelSmileAppFrontEnd
+npm install
+ng serve
+The frontend will be available at http://localhost:4200
+
+## 🔑 Sample Credentials
+You can register a new account, or use this sample:
+{
+  "email": "test@example.com",
+  "password": "123456"
+}
+## 📜 Swagger UI
+Once the backend is running, access the API documentation at:
+
+🔗 http://localhost:8080/swagger-ui.html
+
+## 📦 Features
+ - Login/Register with JWT
+
+ - Auto-login after registration
+
+ - Trip management (list, add, edit, delete)
+
+ - Traveler management (list, add, edit, delete)
+
+ - Confirmation popup before deletion
+
+ - Protected routes using AuthGuard
+
+ - API documentation via Swagger
+

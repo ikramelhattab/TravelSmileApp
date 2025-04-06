@@ -40,15 +40,17 @@ TravelSmileApp is a full-stack web application that allows users to manage trips
 
 #### ✅ Step 1: Create the database
 
+```
 CREATE DATABASE travelsmile;
-
+```
 #### ✅ Step 2: Configure the connection
 Edit src/main/resources/application.properties:
 
-
+```
 spring.datasource.url=jdbc:mysql://localhost:3306/travelsmile
 spring.datasource.username=root
 spring.datasource.password=yourpassword
+```
 #### ✅ Step 3: Run the backend
 
 cd travelSmileAppBackend
@@ -56,19 +58,23 @@ cd travelSmileAppBackend
 The backend will run on http://localhost:8080
 
 ### 2. 💻 Frontend (Angular)
-
+```
 cd travelSmileAppFrontEnd
 npm install
 ng serve
+```
 The frontend will be available at http://localhost:4200
 
 ## 🔑 Sample Credentials
 You can register a new account, or use this sample:
+```
 {
   "email": "test@example.com",
   "password": "123456"
 }
+```
 ## 📜 Swagger UI
+
 Once the backend is running, access the API documentation at:
 
 🔗 http://localhost:8080/swagger-ui.html

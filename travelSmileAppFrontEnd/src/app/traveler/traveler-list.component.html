@@ -1,0 +1,25 @@
+<div class="container mt-4">
+    <h3>Liste des voyageurs</h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Email</th>
+          <th>Téléphone</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let traveler of travelers">
+          <td>{{ traveler.name }}</td>
+          <td>{{ traveler.email }}</td>
+          <td>{{ traveler.phone }}</td>
+          <td>
+            <button *ngIf="traveler.id" class="btn btn-sm btn-warning" (click)="edit(traveler.id)">Éditer</button>
+            <button *ngIf="traveler.id" class="btn btn-sm btn-danger" (click)="delete(traveler.id)">Supprimer</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

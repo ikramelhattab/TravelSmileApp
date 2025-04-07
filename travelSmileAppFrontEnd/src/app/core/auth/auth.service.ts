@@ -25,11 +25,15 @@ export class AuthService {
     return this.http.post<AuthResponse>(`${this.apiUrl}/register`, data);
   }
 
-  isLoggedIn(): boolean {
-    return !!localStorage.getItem('token');
-  }
-
   logout(): void {
     localStorage.removeItem('token');
+  }
+
+  getToken(): string | null {
+    return localStorage.getItem('token');
+  }
+
+  isLoggedIn(): boolean {
+    return !!this.getToken();
   }
 }

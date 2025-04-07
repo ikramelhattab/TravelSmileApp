@@ -56,9 +56,9 @@ Create a new trip.
 **Request Body:**
 ```json
 {
-  "title": "Paris Getaway",
-  "description": "Romantic trip",
-  "destination": "Paris",
+  "title": "BerlinTrip",
+  "description": "Busniss trip",
+  "destination": "Berlin",
   "startDate": "2025-05-01",
   "endDate": "2025-05-10"
 }
@@ -90,8 +90,8 @@ Create a new traveler.
 **Request Body:**
 ```json
 {
-  "name": "John Doe",
-  "email": "john@example.com",
+  "name": "User User",
+  "email": "user@example.com",
   "phone": "123456789"
 }
 ```

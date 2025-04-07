@@ -56,9 +56,9 @@ Create a new trip.
 **Request Body:**
 ```json
 {
-  "title": "Paris Getaway",
-  "description": "Romantic trip",
-  "destination": "Paris",
+  "title": "User User",
+  "description": "Busniss trip",
+  "destination": "Berlin",
   "startDate": "2025-05-01",
   "endDate": "2025-05-10"
 }
